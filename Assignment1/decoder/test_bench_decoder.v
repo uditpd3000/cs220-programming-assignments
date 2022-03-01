@@ -4,7 +4,8 @@ module testbench();
 
 reg a,b,c;
 wire [7:0] out;
-integer i;
+integer i,flag = 0;
+
 
 three_to_eight_decoder dec(a,b,c,out);
 
@@ -30,8 +31,10 @@ end
 
 
 always @(out) begin
-    for (i = 7;i>=0;i-- ) begin
-        $display("%d %d",out[i],$time);
+    for (i = 7;i>=0 ;i-- ) begin
+        $display("out%d = %d at time %d",i,out[i],$time);
+        
+        
 
         
     end

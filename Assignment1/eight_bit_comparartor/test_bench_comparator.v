@@ -12,7 +12,7 @@ initial begin
     #5 
     a = 34;
     b = 29;
-    $display("Completed,going to next test case \n");
+    $monitor("Completed,going to next test case \n");
 
     #5
     a = 29;
